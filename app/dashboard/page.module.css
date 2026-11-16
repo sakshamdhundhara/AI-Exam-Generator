@@ -1,0 +1,183 @@
+.container {
+  min-height: 100vh;
+  background: #0f172a;
+  color: #f8fafc;
+  padding-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: clamp(1rem, 2.5vw, 1.5rem) 0;
+  margin-bottom: clamp(1.5rem, 4vw, 3rem);
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  font-size: clamp(1.35rem, 4vw, 2rem);
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.2;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+.primaryButton {
+  background: #3b82f6;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+}
+
+.primaryButton:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  width: 100%;
+  min-height: 40px;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.emptyState {
+  text-align: center;
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.emptyState p {
+  color: #94a3b8;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.cardHeader {
+  padding: clamp(1rem, 2.5vw, 1.25rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.examSubject {
+  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+  font-weight: 600;
+  margin: 0;
+  word-break: break-word;
+}
+
+.statusBadge {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cardBody {
+  padding: clamp(1rem, 2.5vw, 1.25rem);
+  flex: 1;
+}
+
+.cardBody p {
+  margin: 0.5rem 0;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.cardBody strong {
+  color: #f8fafc;
+}
+
+.date {
+  margin-top: 1rem !important;
+  font-size: 0.85rem !important;
+  color: #64748b !important;
+}
+
+.cardFooter {
+  padding: 1rem clamp(1rem, 2.5vw, 1.25rem);
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 540px) {
+  .headerContent {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .primaryButton {
+    width: 100%;
+    text-align: center;
+  }
+}
